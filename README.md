@@ -4,7 +4,7 @@
 ## Stack
 
   * [Basic Stack](ds/stack/stack.js)
-  * Stack Using Singly Linked List
+  * [Stack Using Singly Linked List](ds/stack/stackSinglyLinkedList.js)
   * Stack using Queue
   * Infix, Prefix and Postfix Expressions
 
@@ -17,4 +17,4 @@
 
 ## LinkedList
 
-  * [Singly Linked List](ds/linkedList/linkedList.js)
+  * [Singly Linked List](ds/linkedList/singlyLinkedList.js)

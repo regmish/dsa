@@ -28,9 +28,13 @@ class Stack {
 
     return undefined;
   }
+
+  isEmpty() {
+    return this.top === -1;
+  }
 }
 
-export default Stack;
+module.exports = Stack;
 
 if (require.main === module) {
   const stack = new Stack(3);

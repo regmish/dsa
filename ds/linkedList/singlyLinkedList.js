@@ -1,7 +1,7 @@
 class ListNode {
-  constructor(data) {
+  constructor(data, next = null) {
     this.data = data;
-    this.next = null;
+    this.next = next;
   }
 }
 
@@ -70,6 +70,12 @@ class LinkedList {
     }
   }
 
+  deleteHead() {
+    if(this.head) {
+      this.head = this.head.next;
+    }
+  }
+
   print() {
     let curr = this.head;
 
@@ -81,6 +87,10 @@ class LinkedList {
   }
 }
 
+module.exports = {
+  ListNode,
+  LinkedList
+};
 
 if (require.main === module) {
   const list = new LinkedList();
