@@ -32,18 +32,26 @@ class Stack {
   isEmpty() {
     return this.top === -1;
   }
+
+  print() {
+    let top = this.top;
+    while(top > -1) {
+      process.stdout.write(`| ${this.items[top--]} |\n_____\n`);
+    }
+  }
+
 }
 
 module.exports = Stack;
 
 if (require.main === module) {
-  const stack = new Stack(3);
+  const stack = new Stack(5);
 
-  console.log('Pushing -> 7', stack.push(7));
-  console.log('Pushing -> 10', stack.push(10));
-  console.log('Pushing -> 8', stack.push(8));
-  console.log('Pushing -> 9', stack.push(9));
-  console.log('Pushing -> 9', stack.push(9));
+  console.log('Pushing -> 1', stack.push(1));
+  console.log('Pushing -> 2', stack.push(2));
+  console.log('Pushing -> 3', stack.push(3));
+  console.log('Pushing -> 4', stack.push(4));
+  console.log('Pushing -> 5', stack.push(5));
   console.log('Peek -> ', stack.peek());
   console.log('Popping ->', stack.pop());
   console.log('Popping ->', stack.pop());

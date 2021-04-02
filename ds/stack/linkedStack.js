@@ -34,8 +34,10 @@ class Stack {
   }
 }
 
+module.exports = Stack;
+
 if (require.main === module) {
-  const stack = new Stack(3);
+  const stack = new Stack();
 
   console.log('Pushing -> 7', stack.push(7));
   console.log('Pushing -> 8', stack.push(8));
