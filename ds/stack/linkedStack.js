@@ -6,7 +6,7 @@ class Stack {
   }
 
   push(data) {
-    this.list.insertFirst(data);
+    this.list.insertFront(data);
   }
 
   pop() {

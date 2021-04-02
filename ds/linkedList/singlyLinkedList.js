@@ -10,23 +10,13 @@ class LinkedList {
     this.head = null;
   }
 
-  insertFirst(data) {
+  insertFront(data) {
     const node = new ListNode(data);
     node.next = this.head;
     this.head = node;
   }
 
-  insertAfter(prev, data) {
-    if (!prev || !(prev instanceof ListNode)) {
-      console.log('Invalid Previous Node');
-    } else {
-      const node = new ListNode(data);
-      node.next = prev.next;
-      prev.next = node;
-    }
-  }
-
-  insertLast(data) {
+  insertEnd(data) {
     const node = new ListNode(data);
 
     if (this.head === null) {
@@ -40,11 +30,21 @@ class LinkedList {
     }
   }
 
-  find(key) {
+  insertAfter(prev, data) {
+    if (!prev || !(prev instanceof ListNode)) {
+      console.log('Invalid Previous Node');
+    } else {
+      const node = new ListNode(data);
+      node.next = prev.next;
+      prev.next = node;
+    }
+  }
+
+  search(key) {
     let curr = this.head;
 
-    while(curr) {
-      if(curr.data === key) return curr;
+    while (curr) {
+      if (curr.data === key) return curr;
       curr = curr.next;
     }
 
@@ -55,14 +55,14 @@ class LinkedList {
     let prev = null;
     let curr = this.head;
 
-    while(curr) {
-      if(curr.data === key) break;
+    while (curr) {
+      if (curr.data === key) break;
       prev = curr;
       curr = curr.next;
     }
 
-    if(curr) {
-      if(curr === this.head) {
+    if (curr) {
+      if (curr === this.head) {
         this.head = this.head.next;
       } else {
         prev.next = curr.next;
@@ -71,7 +71,7 @@ class LinkedList {
   }
 
   deleteHead() {
-    if(this.head) {
+    if (this.head) {
       this.head = this.head.next;
     }
   }
@@ -95,12 +95,12 @@ module.exports = {
 if (require.main === module) {
   const list = new LinkedList();
 
-  list.insertLast(2)
-  list.insertLast(3)
-  list.insertLast(4)
-  list.insertLast(6)
-  list.insertFirst(1)
-  list.insertAfter(list.find(4), 5);
+  list.insertEnd(2)
+  list.insertEnd(3)
+  list.insertEnd(4)
+  list.insertEnd(6)
+  list.insertFront(1)
+  list.insertAfter(list.search(4), 5);
 
   list.print();
   list.delete(3)

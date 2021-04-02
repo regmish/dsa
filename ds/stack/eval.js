@@ -77,4 +77,4 @@ const evaluate = (expr) => {
 };
 
 
-console.log(evaluate('1 + (7 - 5) * 2 / (4 - 2)'));
+console.log(evaluate('1 + (7 - 5) * 2 / (4 - 2)')); // 3
