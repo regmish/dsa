@@ -12,6 +12,7 @@
 ## Queue
 
   * Basic Queue
+  * [Priority Queue (Binary Heap)](ds/queue/heap.js)
 
 
 
