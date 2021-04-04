@@ -127,6 +127,8 @@ class BinaryHeap {
   }
 }
 
+module.exports = BinaryHeap;
+
 if (require.main === module) {
   const q = new BinaryHeap('max');
   q.offer(35);
